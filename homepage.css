@@ -1,0 +1,215 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #01554f;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+.navbar .menu-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.navbar a {
+  color: white;
+font-size: 1.3rem;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #fad97a;
+}
+
+.navbar .logo {
+  color: white;
+  font-weight: 600;
+  font-size: 2.1rem;
+  text-decoration: none;
+}
+
+.navbar .logo span {
+  color: #fad97a;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+    background-image: url(/images/limon.jpg);
+}
+
+
+
+
+
+.hero-section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 190px;
+}
+
+.hero-section .content h2 {
+  font-size: 4.7rem;
+  max-width: 600px;
+  line-height: 70px;
+  margin-bottom: 15px;
+}
+
+.hero-section .content p {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  max-width: 520px;
+}
+
+
+.hero-section .content .button{
+    margin-top: 30px;
+}
+.hero-section .content .button a{
+    background-color:  #01554f;
+    padding: 12px 40px;
+    text-decoration: none;
+    color: white;
+    font-size:18px;
+    letter-spacing: 1.5px;
+    border: none;
+    border-radius: 6px;
+}
+
+.hero-section .content .button a:hover {
+  background: #01554f;
+  color: #fad97a;
+}
+
+#close-menu-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+#hamburger-btn {
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  header.show-mobile-menu::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+  }
+
+  #hamburger-btn, #close-menu-btn {
+    display: block;
+  }
+
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+    
+  .navbar .menu-links {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Change left to right */
+    width: 250px;
+    height: 100vh;
+    background: #01554f;
+    flex-direction: column;
+    padding: 70px 40px 0;
+    transition: right 0.2s ease; /* Change left to right */
+    z-index: 1020; /* Even higher to ensure visibility over other content */
+  }
+  
+  header.show-mobile-menu .navbar .menu-links {
+    right: 0; /* Change left to right */
+  }
+  
+  .navbar .menu-links span {
+    display: block; /* Make the menu links appear vertically */
+    padding: 15px; /* Adjust padding as needed */
+    text-align: center; /* Center the text */
+  }
+
+  .navbar a {
+    color: white;
+
+  }
+  .navbar img{
+max-width: 20%;
+  }
+
+  .hero-section .content {
+    text-align: center;
+  
+  }
+
+  .hero-section .content :is(h2, p) {
+    max-width: 200%;
+  }
+
+  .hero-section .content h2 {
+    font-size: 2.3rem;
+    line-height: 60px;
+   
+  }
+  
+  .hero-section .content button {
+    padding: 9px 18px;
+  }
+}
+
+.navbar img {
+  max-height: 100%;
+  max-width: 6.9%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  }
+
